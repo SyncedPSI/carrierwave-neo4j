@@ -7,7 +7,7 @@ module CarrierWave::Neo4j
         end
 
         def to_db(value)
-          if value.is_a? Array
+          if value.is_a?(Array)
             value.map(&:identifier)
           else
             value.identifier
